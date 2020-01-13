@@ -1,3 +1,11 @@
+1.1
+
+Practice the commands.
+Start 3 containers from image that does not automatically exit, such as nginx, detached.
+Stop 2 of the containers leaving 1 up.
+Prove that you have completed this part of exercise by delivering the output for docker ps -a.
+--------------------------------------------------------------------------------
+
 CONTAINER ID        IMAGE                               COMMAND                   CREATED             STATUS                        PORTS               NAMES
 657b7d79fdaa        postgres                            "docker-entrypoint.s…"    5 minutes ago       Up 20 seconds                 5432/tcp            magical_pare
 8be2b3eeecba        nginx                               "nginx -g 'daemon of…"    8 minutes ago       Up 42 seconds                 80/tcp              interesting_bartik
