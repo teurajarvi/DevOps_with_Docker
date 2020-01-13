@@ -6,7 +6,6 @@ Prove that you have completed this part of exercise by delivering the output for
 
 ~$ sudo docker container ls -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-~$
 
-
-
+~$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
