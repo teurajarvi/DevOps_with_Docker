@@ -1,0 +1,9 @@
+CONTAINER ID        IMAGE                               COMMAND                   CREATED             STATUS                        PORTS               NAMES
+657b7d79fdaa        postgres                            "docker-entrypoint.s…"    5 minutes ago       Up 20 seconds                 5432/tcp            magical_pare
+8be2b3eeecba        nginx                               "nginx -g 'daemon of…"    8 minutes ago       Up 42 seconds                 80/tcp              interesting_bartik
+82ffc95f9691        ubuntu:16.04                        "sh -c 'while true; …"    40 minutes ago      Up 40 minutes                                     testi
+
+CONTAINER ID        IMAGE                               COMMAND                   CREATED             STATUS                          PORTS               NAMES
+657b7d79fdaa        postgres                            "docker-entrypoint.s…"    7 minutes ago       Exited (0) 16 seconds ago                           magical_pare
+8be2b3eeecba        nginx                               "nginx -g 'daemon of…"    9 minutes ago       Exited (0) 4 seconds ago                            interesting_bartik
+82ffc95f9691        ubuntu:16.04                        "sh -c 'while true; …"    41 minutes ago      Up 41 minutes                                       testi
