@@ -139,5 +139,6 @@ UPDATE AVAILABLE The latest version of `serve` is 11.3.0
    │                                                   │
    └───────────────────────────────────────────────────┘
 
-
+Browser: http://localhost:5000/ -> Part 1
+Exercise 1.10: Congratulations! You configured your ports correctly! 
 
