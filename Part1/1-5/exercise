@@ -28,3 +28,8 @@ Digest: sha256:181800dada370557133a502977d0e3f7abda0c25b9bbb035f199f5eb6082a114
 Status: Downloaded newer image for ubuntu:16.04
 docker.io/library/ubuntu:16.04
 
+~$ sudo docker run -it --name ubuntu_curl ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+sh: 1: curl: not found
