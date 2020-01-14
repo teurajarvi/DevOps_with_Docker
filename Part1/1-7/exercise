@@ -14,14 +14,34 @@ Run command docker run [options] curler (with correct flags again, as in 1.5) an
 Output should match the 1.5 one.
 --------------------------------------------------------------------
 
-teurajarvi@teurajarvi-Latitude-7490:~/Projects/Docker/Dockerized/1-7$ sudo docker build -t curler .
-[sudo] password for teurajarvi: 
+$ sudo docker build -t curler .
 Sending build context to Docker daemon  3.072kB
-Step 1/2 : FROM ubuntu:16.04
+Step 1/5 : FROM ubuntu:16.04
  ---> c6a43cd4801e
-Step 2/2 : CMD ["./echo_website.sh"]
- ---> Running in e3c41de1ca12
-Removing intermediate container e3c41de1ca12
- ---> 7cd58064c66e
-Successfully built 7cd58064c66e
+Step 2/5 : WORKDIR /mydir
+ ---> Using cache
+ ---> eeb293149c3b
+Step 3/5 : RUN apt-get update && apt-get install -y curl
+ ---> Using cache
+ ---> 6b3bc93fd8d7
+Step 4/5 : COPY echo_website.sh .
+ ---> Using cache
+ ---> a7c4a622b9a4
+Step 5/5 : CMD ["./echo_website.sh"]
+ ---> Running in 5db59a45b5a1
+Removing intermediate container 5db59a45b5a1
+ ---> daa2942204fe
+Successfully built daa2942204fe
 Successfully tagged curler:latest
+
+$ sudo docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
