@@ -7,7 +7,10 @@ Start the container with bind mount so that the logs are created into your files
 Submit your used commands for this exercise.
 -----------------------------------------------------
 
-$ sudo docker run devopsdockeruh/first_volume_exercise
+$ touch logit.txt
+$ ls
+logit.txt
+$ sudo docker run -v $(pwd)/logit.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
 Unable to find image 'devopsdockeruh/first_volume_exercise:latest' locally
 latest: Pulling from devopsdockeruh/first_volume_exercise
 741437d97401: Already exists 
@@ -26,4 +29,22 @@ Status: Downloaded newer image for devopsdockeruh/first_volume_exercise:latest
 Wrote to file /usr/app/logs.txt
 Wrote to file /usr/app/logs.txt
 Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
 
+$ tail -F logit.txt 
+Tue, 14 Jan 2020 13:44:49 GMT
+Tue, 14 Jan 2020 13:44:52 GMT
+Tue, 14 Jan 2020 13:44:55 GMT
+Tue, 14 Jan 2020 13:44:58 GMT
+Secret message is:
+"Volume bind mount is easy"
+Tue, 14 Jan 2020 13:45:04 GMT
+Tue, 14 Jan 2020 13:45:07 GMT
+Tue, 14 Jan 2020 13:45:10 GMT
+Tue, 14 Jan 2020 13:45:13 GMT
