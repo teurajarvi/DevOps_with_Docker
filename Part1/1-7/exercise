@@ -1,0 +1,27 @@
+1.7
+
+Now that we know how to create and build Dockerfiles we can improve previous works.
+
+Make a script file for 
+echo "Input website:"; 
+read website; 
+echo "Searching.."; 
+sleep 1; 
+curl http://$website; 
+and run it inside the container using CMD. Build the image with tag “curler”.
+
+Run command docker run [options] curler (with correct flags again, as in 1.5) and input helsinki.fi into it. 
+Output should match the 1.5 one.
+--------------------------------------------------------------------
+
+teurajarvi@teurajarvi-Latitude-7490:~/Projects/Docker/Dockerized/1-7$ sudo docker build -t curler .
+[sudo] password for teurajarvi: 
+Sending build context to Docker daemon  3.072kB
+Step 1/2 : FROM ubuntu:16.04
+ ---> c6a43cd4801e
+Step 2/2 : CMD ["./echo_website.sh"]
+ ---> Running in e3c41de1ca12
+Removing intermediate container e3c41de1ca12
+ ---> 7cd58064c66e
+Successfully built 7cd58064c66e
+Successfully tagged curler:latest
