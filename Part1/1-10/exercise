@@ -22,6 +22,11 @@ Do not alter the code of the project
 Nodejs: https://github.com/nodejs/help/wiki/Installation
 Nodejs distro: https://nodejs.org/dist/v10.18.1/
 
+~/.profile
+# Nodejs
+VERSION=v10.15.0
+DISTRO=linux-x64
+export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
 frontend-example-docker-master$ npm install
 frontend-example-docker-master$ npm start
