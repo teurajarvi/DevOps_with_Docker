@@ -19,20 +19,24 @@ Do not alter the code of the project
     TIP: You do not have to install anything new outside containers.
 ---------------------------------------------------------------------------
 
-Nodejs: https://github.com/nodejs/help/wiki/Installation
-Nodejs distro: https://nodejs.org/dist/v10.18.1/
-
-~/.profile
-# Nodejs
-VERSION=v10.15.0
-DISTRO=linux-x64
-export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
-
-/frontend-example-docker-master$ sudo npm install -g serve 
-/usr/local/bin/serve -> /usr/local/lib/node_modules/serve/bin/serve.js
-/usr/local/lib
-└─┬ serve@11.3.0 
-
+$ sudo docker build -t serve .
+Sending build context to Docker daemon  162.3MB
+Step 1/5 : FROM ubuntu:16.04
+ ---> c6a43cd4801e
+Step 2/5 : RUN apt-get update && apt-get install -y curl
+ ---> Using cache
+ ---> 92ec135d2286
+Step 3/5 : RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+ ---> Using cache
+ ---> e06e86c254a1
+Step 4/5 : RUN apt install -y nodejs
+ ---> Using cache
+ ---> 09283fa45344
+Step 5/5 : WORKDIR /mydir
+ ---> Using cache
+ ---> cb217dde032f
+Successfully built cb217dde032f
+Successfully tagged serve:latest
 
 
 Browser: http://localhost:5000/ -> Part 1
