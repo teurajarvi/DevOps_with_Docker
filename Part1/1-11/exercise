@@ -41,7 +41,7 @@ Step 7/7 : COPY ./backend-example-docker-master .
 Successfully built d817313e5fbd
 Successfully tagged back:latest
 
-$ sudo docker run -it -p 8000:8000 back sh -c 'npm install; npm start' -v $(pwd)/logs.txt:/mydir/logs.txt
+$ sudo docker run -it -v $(pwd)/logs.txt:/mydir/logs.txt -p 8000:8000 back sh -c 'npm install; npm start'
 
 > nodemon@1.18.9 postinstall /mydir/node_modules/nodemon
 > node bin/postinstall || exit 0
