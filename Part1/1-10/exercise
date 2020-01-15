@@ -21,26 +21,45 @@ Do not alter the code of the project
 
 $ sudo docker build -t serve .
 Sending build context to Docker daemon  162.3MB
-Step 1/5 : FROM ubuntu:16.04
+Step 1/7 : FROM ubuntu:16.04
  ---> c6a43cd4801e
-Step 2/5 : RUN apt-get update && apt-get install -y curl
+Step 2/7 : RUN apt-get update && apt-get install -y curl
  ---> Using cache
  ---> 92ec135d2286
-Step 3/5 : RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+Step 3/7 : RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
  ---> Using cache
  ---> e06e86c254a1
-Step 4/5 : RUN apt install -y nodejs
+Step 4/7 : RUN apt install -y nodejs
  ---> Using cache
  ---> 09283fa45344
-Step 5/5 : WORKDIR /mydir
+Step 5/7 : EXPOSE 5000
  ---> Using cache
- ---> cb217dde032f
-Successfully built cb217dde032f
+ ---> 9160460fdf7c
+Step 6/7 : WORKDIR /mydir
+ ---> Using cache
+ ---> 12f477503466
+Step 7/7 : COPY ./frontend-example-docker-master .
+ ---> Using cache
+ ---> cef71e714294
+Successfully built cef71e714294
 Successfully tagged serve:latest
 
-$ sudo docker run -p 5000:5000 serve sh -c 'npm start'
+$ sudo docker run -it -p 5000:5000 serve sh -c 'npm start'
+
+> frontend-example-docker@1.0.0 start /mydir
+> webpack --mode production && serve -s -l 5000 dist
+.
+.
+   ┌────────────────────────────────────────────────┐
+   │                                                │
+   │   Serving!                                     │
+   │                                                │
+   │   - Local:            http://localhost:5000    │
+   │   - On Your Network:  http://172.17.0.2:5000   │
+   │                                                │
+   └────────────────────────────────────────────────┘
 
 
-Browser: http://localhost:5000/ -> Part 1
+Browser: http://localhost:5000/ 
+Part 1
 Exercise 1.10: Congratulations! You configured your ports correctly! 
-
