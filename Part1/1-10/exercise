@@ -38,6 +38,8 @@ Step 5/5 : WORKDIR /mydir
 Successfully built cb217dde032f
 Successfully tagged serve:latest
 
+$ sudo docker run -p 5000:5000 serve sh -c 'npm start'
+
 
 Browser: http://localhost:5000/ -> Part 1
 Exercise 1.10: Congratulations! You configured your ports correctly! 
