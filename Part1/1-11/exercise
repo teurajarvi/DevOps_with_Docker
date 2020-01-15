@@ -30,14 +30,13 @@ Step 4/7 : RUN apt install -y nodejs
  ---> Using cache
  ---> 09283fa45344
 Step 5/7 : EXPOSE 8000
- ---> Running in f90ce0377775
-Removing intermediate container f90ce0377775
+ ---> Using cache
  ---> 060fbc436b88
 Step 6/7 : WORKDIR /mydir
- ---> Running in 8c7b1d89d8be
-Removing intermediate container 8c7b1d89d8be
+ ---> Using cache
  ---> be6617fc6776
 Step 7/7 : COPY ./backend-example-docker-master .
+ ---> Using cache
  ---> d817313e5fbd
 Successfully built d817313e5fbd
 Successfully tagged back:latest
