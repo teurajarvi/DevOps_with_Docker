@@ -15,3 +15,53 @@ Submit the Dockerfile and the command used.
 
 Do not alter the code of the project
 ------------------------------------------------------
+
+$ sudo docker build -t back .
+Sending build context to Docker daemon  288.3kB
+Step 1/7 : FROM ubuntu:16.04
+ ---> c6a43cd4801e
+Step 2/7 : RUN apt-get update && apt-get install -y curl
+ ---> Using cache
+ ---> 92ec135d2286
+Step 3/7 : RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+ ---> Using cache
+ ---> e06e86c254a1
+Step 4/7 : RUN apt install -y nodejs
+ ---> Using cache
+ ---> 09283fa45344
+Step 5/7 : EXPOSE 8000
+ ---> Running in f90ce0377775
+Removing intermediate container f90ce0377775
+ ---> 060fbc436b88
+Step 6/7 : WORKDIR /mydir
+ ---> Running in 8c7b1d89d8be
+Removing intermediate container 8c7b1d89d8be
+ ---> be6617fc6776
+Step 7/7 : COPY ./backend-example-docker-master .
+ ---> d817313e5fbd
+Successfully built d817313e5fbd
+Successfully tagged back:latest
+
+$ sudo docker run -it -p 8000:8000 back sh -c 'npm install; npm start'
+
+> nodemon@1.18.9 postinstall /mydir/node_modules/nodemon
+> node bin/postinstall || exit 0
+
+Love nodemon? You can now support the project via the open collective:
+ > https://opencollective.com/nodemon/donate
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 606 packages from 458 contributors and audited 5317 packages in 6.974s
+found 273 vulnerabilities (1 moderate, 272 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> backend-example-docker@1.0.0 start /mydir
+> cross-env NODE_ENV=production node index.js
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Started on port 8000
+
+Browser: http://localhost:8000/
+Port configured correctly, generated message in logs.txt
