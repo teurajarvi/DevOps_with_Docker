@@ -15,6 +15,7 @@ For this exercise return the url in which the released application is.
 You could also use the heroku CLI to build and push, but since we didn’t want to build anything this time it was 
 easier to just tag the image.
 -----------------------------------------------------------------
+Application can be found from https://hero-exampl.herokuapp.com/
 
 $ sudo docker pull devopsdockeruh/heroku-example
 Using default tag: latest
@@ -65,7 +66,9 @@ c240c542ed55: Pushed
 badfbcebf7f8: Pushed 
 latest: digest: sha256:7b355fd5a666655eeed4fd8b7836824e240611e7916841cfffd02a4cd10a1ce4 size: 3479
 
-Application can be found from https://dashboard.heroku.com/apps/hero-exampl
+$ sudo heroku container:release web --app hero-exampl
+Releasing images web to hero-exampl... done
+
 Application can be found from https://hero-exampl.herokuapp.com/
 
 
@@ -114,5 +117,7 @@ f36b28e4310d: Pushed
 91d23cf5425a: Pushed 
 latest: digest: sha256:d03a1f46b74173284275012dd9953cbd9680e4c601027dd7e3d1152ba3b98a68 size: 1985
 
-Application can be found from https://dashboard.heroku.com/apps/hypotenusa
+$ sudo heroku container:release web --app hypotenusa
+Releasing images web to hypotenusa... done
+
 Application can be found from https://hypotenusa.herokuapp.com/
