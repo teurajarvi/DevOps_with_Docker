@@ -85,3 +85,4 @@ f36b28e4310d: Pushed
 91d23cf5425a: Pushed 
 latest: digest: sha256:d03a1f46b74173284275012dd9953cbd9680e4c601027dd7e3d1152ba3b98a68 size: 1985
 
+Application can be found from https://dashboard.heroku.com/apps/hypotenusa
