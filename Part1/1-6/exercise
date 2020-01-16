@@ -9,6 +9,8 @@ Add a CMD line to the Dockerfile and tag it as “docker-clock” so that docker
 the clock output.
 ------------------------------
 
+COMMANDS:
+
 $ sudo docker build -t docker-clock . 
 Sending build context to Docker daemon  2.048kB
 Step 1/2 : FROM devopsdockeruh/overwrite_cmd_exercise
