@@ -58,4 +58,30 @@ Initialized empty Git repository in <path/.git/
 
 $ sudo docker tag teurajarvi/hypotenusa registry.heroku.com/hypotenusa/web
 
+$ sudo docker push registry.heroku.com/hypotenusa/web
+The push refers to repository [registry.heroku.com/hypotenusa/web]
+e75d7265203c: Preparing 
+1736a093730f: Preparing 
+3a3ea18301b2: Preparing 
+1b557aae9908: Preparing 
+77008e118980: Preparing 
+6cb741cb00b7: Waiting 
+f36b28e4310d: Waiting 
+91d23cf5425a: Waiting 
+no basic auth credentials
+
+$ sudo heroku container:login
+Login Succeeded
+
+$ sudo docker push registry.heroku.com/hypotenusa/web
+The push refers to repository [registry.heroku.com/hypotenusa/web]
+e75d7265203c: Pushed 
+1736a093730f: Pushed 
+3a3ea18301b2: Pushed 
+1b557aae9908: Pushed 
+77008e118980: Pushed 
+6cb741cb00b7: Pushed 
+f36b28e4310d: Pushed 
+91d23cf5425a: Pushed 
+latest: digest: sha256:d03a1f46b74173284275012dd9953cbd9680e4c601027dd7e3d1152ba3b98a68 size: 1985
 
