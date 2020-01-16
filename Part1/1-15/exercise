@@ -8,4 +8,39 @@ make sure you at least have a basic description and instructions for how to run 
 application in a README that’s available through your submission.
 --------------------------------------------------------------------------------------
 
+Download project from https://github.com/teurajarvi/hypotenusa
+
 $ sudo docker build -t hypotenusa .
+Sending build context to Docker daemon  10.75kB
+Step 1/6 : FROM ubuntu:16.04
+ ---> c6a43cd4801e
+Step 2/6 : RUN apt-get update && apt-get install build-essential manpages-dev -y
+ ---> Using cache
+ ---> 8a384982968f
+Step 3/6 : WORKDIR /mydir
+ ---> Using cache
+ ---> c2b450da494c
+Step 4/6 : COPY ./hypotenusa-master .
+ ---> Using cache
+ ---> 7cf052179e74
+Step 5/6 : RUN cc hypotenusa.c -o hypotenusa -lm
+ ---> Running in 7918dfd193df
+Removing intermediate container 7918dfd193df
+ ---> 20b36ceb29a9
+Step 6/6 : CMD ["./hypotenusa"]
+ ---> Running in cb6d5829f387
+Removing intermediate container cb6d5829f387
+ ---> 211679fc8d1d
+Successfully built 211679fc8d1d
+Successfully tagged hypotenusa:latest
+
+
+$ sudo docker run -it --name hypo hypotenusa
+ Anna kolmion kahden lyhimmän sivun pituuden ja lasken hypotenuusan 
+
+ Kolmion ensimmäisen sivun pituus: 5
+
+ Kolmion toisen sivun pituus: 4
+
+ Hypotenuusa: 6.40 
+
