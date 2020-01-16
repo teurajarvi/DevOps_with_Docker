@@ -7,6 +7,8 @@ Use -p flag to access the contents with your browser.
 Submit your used commands for this exercise.
 -------------------------------------------------
 
+COMMANDS:
+
 $ sudo docker run -p 1234:80 devopsdockeruh/ports_exercise
 Unable to find image 'devopsdockeruh/ports_exercise:latest' locally
 latest: Pulling from devopsdockeruh/ports_exercise
@@ -23,5 +25,5 @@ Status: Downloaded newer image for devopsdockeruh/ports_exercise:latest
 
 Listening on port 80, this means inside of the container. Use -p to map the port to a port of your local machine.
 
-Browser: http://127.0.0.1:1234/ -> Ports configured correctly!!
-Browser: http://localhost:1234/ -> Ports configured correctly!!
+BROWSER: http://127.0.0.1:1234/ -> Ports configured correctly!!
+BROWSER: http://localhost:1234/ -> Ports configured correctly!!
