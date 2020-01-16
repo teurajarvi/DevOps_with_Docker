@@ -18,6 +18,8 @@ Test inputting helsinki.fi into the application. It should respond with somethin
 This time return the command you used to start process and the command(s) you used to fix the ensuing problems.
 ------------------------------------------------------------------------
 
+COMMANDS:
+
 ~$ sudo docker pull ubuntu:16.04
 16.04: Pulling from library/ubuntu
 3386e6af03b0: Pull complete 
