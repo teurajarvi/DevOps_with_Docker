@@ -41,4 +41,11 @@ docker.io/devopsdockeruh/heroku-example:latest
 $ sudo snap install --classic heroku
 heroku v7.35.1 from Heroku✓ installed
 
+$ heroku login
+heroku: Press any key to open up the browser to login or q to exit: 
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/73519840-469d-48a1-8f5f-xxxx
+Logging in... done
+Logged in as <hide username>
+
+
 
