@@ -54,7 +54,7 @@ drwxrwxr-x 15 <username> <username> 4096 tammi 16 14:07 ..
 -rwxr-xr-x  1 root       root        193 tammi 16 14:26 Dockerfile
 drwxr-xr-x  2 root       root       4096 tammi 16 14:26 hypotenusa-master
 $ git init
-Initialized empty Git repository in <path/.git/
+Initialized empty Git repository in <path>/.git/
 
 $ sudo docker tag teurajarvi/hypotenusa registry.heroku.com/hypotenusa/web
 
