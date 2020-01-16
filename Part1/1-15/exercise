@@ -7,9 +7,12 @@ For this exercise to be complete you have to provide the link to the project in 
 make sure you at least have a basic description and instructions for how to run the
 application in a README that’s available through your submission.
 --------------------------------------------------------------------------------------
+Original application is written in ANSI-C by me and can be found from GitHub https://github.com/teurajarvi/hypotenusa
 
-Download project from https://github.com/teurajarvi/hypotenusa
+Pull the hypotenusa container from https://hub.docker.com/r/teurajarvi/hypotenusa
+$ sudo docker pull teurajarvi/hypotenusa
 
+HOW I MADE THE CONTAINED AND PUSH IT TO THE DOCKERHUB
 $ sudo docker build -t hypotenusa .
 Sending build context to Docker daemon  10.75kB
 Step 1/6 : FROM ubuntu:16.04
@@ -34,7 +37,6 @@ Removing intermediate container cb6d5829f387
 Successfully built 211679fc8d1d
 Successfully tagged hypotenusa:latest
 
-
 $ sudo docker run -it --name hypo hypotenusa
  Anna kolmion kahden lyhimmän sivun pituuden ja lasken hypotenuusan 
 
@@ -44,3 +46,20 @@ $ sudo docker run -it --name hypo hypotenusa
 
  Hypotenuusa: 6.40 
 
+$ sudo docker tag hypotenusa teurajarvi/hypotenusa
+
+$ sudo docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+$ sudo docker push teurajarvi/hypotenusa
+The push refers to repository [docker.io/teurajarvi/hypotenusa]
+e75d7265203c: Pushed 
+1736a093730f: Pushed 
+3a3ea18301b2: Pushed 
+1b557aae9908: Pushed 
+77008e118980: Mounted from teurajarvi/youtube-dl 
+6cb741cb00b7: Mounted from teurajarvi/youtube-dl 
+f36b28e4310d: Mounted from teurajarvi/youtube-dl 
+91d23cf5425a: Mounted from teurajarvi/youtube-dl 
+latest: digest: sha256:d03a1f46b74173284275012dd9953cbd9680e4c601027dd7e3d1152ba3b98a68 size: 1985
