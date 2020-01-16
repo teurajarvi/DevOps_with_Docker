@@ -17,3 +17,24 @@ easier to just tag the image.
 -----------------------------------------------------------------
 
 $ sudo docker pull devopsdockeruh/heroku-example
+Using default tag: latest
+latest: Pulling from devopsdockeruh/heroku-example
+ab1fc7e4bf91: Pull complete 
+35fba333ff52: Pull complete 
+f0cb1fa13079: Pull complete 
+3d1dd648b5ad: Pull complete 
+49f7a0920ce1: Pull complete 
+8cf8e3de2ce5: Pull complete 
+474787825669: Pull complete 
+15d7bfce5edc: Pull complete 
+d2d2623825c8: Pull complete 
+e74c98f3ebfa: Pull complete 
+8de9e48ee5db: Pull complete 
+1d6d387ff0c9: Pull complete 
+7f0fb2fce006: Pull complete 
+4f191e04d0ba: Pull complete 
+0fe28e9dc5b1: Pull complete 
+Digest: sha256:7b355fd5a666655eeed4fd8b7836824e240611e7916841cfffd02a4cd10a1ce4
+Status: Downloaded newer image for devopsdockeruh/heroku-example:latest
+docker.io/devopsdockeruh/heroku-example:latest
+
