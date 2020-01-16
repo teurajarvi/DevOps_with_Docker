@@ -7,6 +7,11 @@ Every 15 seconds the clock will send you a “secret message”.
 Submit the secret message and command(s) given as your answer.
 ---------------------------------------------------------------
 
+Secret message is:
+"Docker is easy"
+
+COMMANDS:
+
 ~$ sudo docker run -it devopsdockeruh/exec_bash_exercise
 Unable to find image 'devopsdockeruh/exec_bash_exercise:latest' locally
 latest: Pulling from devopsdockeruh/exec_bash_exercise
