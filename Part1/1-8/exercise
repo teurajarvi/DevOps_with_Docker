@@ -7,9 +7,13 @@ Start the container with bind mount so that the logs are created into your files
 Submit your used commands for this exercise.
 -----------------------------------------------------
 
+COMMANDS: 
+
 $ touch logit.txt
+
 $ ls
 logit.txt
+
 $ sudo docker run -v $(pwd)/logit.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
 Unable to find image 'devopsdockeruh/first_volume_exercise:latest' locally
 latest: Pulling from devopsdockeruh/first_volume_exercise
