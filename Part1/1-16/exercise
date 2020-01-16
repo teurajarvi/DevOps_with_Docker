@@ -47,5 +47,13 @@ Opening browser to https://cli-auth.heroku.com/auth/cli/browser/73519840-469d-48
 Logging in... done
 Logged in as <hide username>
 
+$ ls -la
+total 16
+drwxrwxr-x  3 <username> <username> 4096 tammi 16 14:31 .
+drwxrwxr-x 15 <username> <username> 4096 tammi 16 14:07 ..
+-rwxr-xr-x  1 root       root        193 tammi 16 14:26 Dockerfile
+drwxr-xr-x  2 root       root       4096 tammi 16 14:26 hypotenusa-master
+$ git init
+Initialized empty Git repository in <path/.git/
 
 
