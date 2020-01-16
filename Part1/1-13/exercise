@@ -8,3 +8,27 @@ Use openjdk image FROM openjdk:<tag> to get java instead of installing it manual
 
 You’ve completed the exercise when you see a ‘Success’ message in your browser.
 -------------------------------------------------------------
+
+$ sudo docker build -t java-spring .
+.
+.
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/7.0-beta/asm-util-7.0-beta.jar (81 kB at 77 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.jar (2.3 MB at 1.4 MB/s)
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  43.541 s
+[INFO] Finished at: 2020-01-16T10:10:49Z
+[INFO] ------------------------------------------------------------------------
+Removing intermediate container 33e362fbff93
+ ---> 7bc4d773e473
+Step 6/6 : CMD ["java", "Main"]
+ ---> Running in d15120fde5c8
+Removing intermediate container d15120fde5c8
+ ---> 4e7bde87abff
+Successfully built 4e7bde87abff
+Successfully tagged java-spring:latest
+
+
+
