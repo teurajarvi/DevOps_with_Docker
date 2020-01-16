@@ -9,18 +9,10 @@ Use openjdk image FROM openjdk:<tag> to get java instead of installing it manual
 You’ve completed the exercise when you see a ‘Success’ message in your browser.
 -------------------------------------------------------------
 
+COMMANDS:
+
 $ sudo docker build -t java-spring .
-.
-.
-Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/7.0-beta/asm-util-7.0-beta.jar (81 kB at 77 kB/s)
-Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/19.0/guava-19.0.jar (2.3 MB at 1.4 MB/s)
-[INFO] Replacing main artifact with repackaged archive
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  43.541 s
-[INFO] Finished at: 2020-01-16T10:10:49Z
-[INFO] ------------------------------------------------------------------------
+...
 Removing intermediate container 33e362fbff93
  ---> 7bc4d773e473
 Step 6/6 : CMD ["java", "Main"]
@@ -58,5 +50,5 @@ $ sudo docker run -it -p 8080:8080 java-spring sh -c 'java -jar ./target/docker-
 2020-01-16 10:23:46.201  INFO 6 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
 
 
-Browser: http://localhost:8080/ -> click "Press here"-button
-Result: Text Success is displayed below the "Press here"-button and url changed to http://localhost:8080/press
+BROWSER: http://localhost:8080/ -> click "Press here"-button
+RESULTS: Text Success is displayed below the "Press here"-button and url changed to http://localhost:8080/press
