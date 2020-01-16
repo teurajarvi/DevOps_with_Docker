@@ -5,6 +5,11 @@ Read the Dockerfile and/or docs to learn what input will get the application to 
 Submit the secret message and command(s) given to get it as your answer.
 ------------------------------------------------------------------------
 
+You found the correct password. Secret message is:
+"This is the secret message"
+
+COMMANDS:
+
 ~$ sudo docker run -it devopsdockeruh/pull_exercise
 Unable to find image 'devopsdockeruh/pull_exercise:latest' locally
 latest: Pulling from devopsdockeruh/pull_exercise
