@@ -38,3 +38,7 @@ Digest: sha256:7b355fd5a666655eeed4fd8b7836824e240611e7916841cfffd02a4cd10a1ce4
 Status: Downloaded newer image for devopsdockeruh/heroku-example:latest
 docker.io/devopsdockeruh/heroku-example:latest
 
+$ sudo snap install --classic heroku
+heroku v7.35.1 from Heroku✓ installed
+
+
