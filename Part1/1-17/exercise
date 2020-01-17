@@ -8,3 +8,5 @@ The environment can be partially used by running commands manually inside the co
 
 Explain what you created and publish it to Docker Hub.
 --------------------------------------------------------------
+
+$ sudo docker build -t ubuntu:18.04 .
