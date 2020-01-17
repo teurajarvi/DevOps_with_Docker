@@ -12,3 +12,34 @@ configure the setup. If you did, explain the edits with your submission of the D
 
 You’ve completed the exercise when the application works in your browser.
 -----------------------------------------------------------------------
+
+DELETE config/credentials.yml.enc from project to be able to create a new credentials
+
+$ sudo docker build -t ruby .
+
+$ sudo docker run -it -p 3000:3000 ruby sh -c 'EDITOR="vim --wait" rails credentials:edit; rails s -e production'
+Adding config/master.key to store the master encryption key: 875fbf1e76056c763d138a0198a6ca9c
+Save this in a password manager your team can access.
+If you lose the key, no one, including you, can access anything encrypted with it.
+      create  config/master.key
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 21 2019 04:10:35)
+Unknown option argument: "--wait"
+More info with: "vim -h"
+New credentials encrypted and saved.
+=> Booting Puma
+=> Rails 5.2.2.1 application starting in production 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.6.0-p0), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: production
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+
+
+BROWSER: http://localhost:3000/
+New Press
+
+Total presses: 0 
+Button: "Press"
+Link: list presses
