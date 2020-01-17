@@ -10,3 +10,14 @@ Explain what you created and publish it to Docker Hub.
 --------------------------------------------------------------
 
 $ sudo docker build -t ubuntu:18.04 .
+
+$ sudo docker run -it ubuntu:18.04
+
+EXPLAIN:
+- Container created from ubuntu:18.04
+- wget and gnupg intalled to be able to add Atom package
+- vim installed since handly in some development cases
+- Nodejs installed for frontend development
+- git and subversion installed for version control
+- /home set up as working folder
+- Container is started to shell when run
