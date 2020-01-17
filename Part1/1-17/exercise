@@ -8,14 +8,12 @@ The environment can be partially used by running commands manually inside the co
 
 Explain what you created and publish it to Docker Hub.
 --------------------------------------------------------------
+Container is available at dockerhub https://hub.docker.com/r/teurajarvi/ubuntu18.04_for_development
 
 $ sudo docker build -t ubuntu:18.04 .
-
 $ sudo docker run -it ubuntu:18.04
-
 $ sudo docker tag ubuntu18.04_for_development teurajarvi/ubuntu18.04_for_development
 $ sudo docker push teurajarvi/ubuntu18.04_for_development
-
 
 EXPLAIN:
 - Container created from ubuntu:18.04
